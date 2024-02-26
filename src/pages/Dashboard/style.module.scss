@@ -1,0 +1,13 @@
+.contentDashboard {
+    max-width: 500px;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    border: 1px solid;
+    
+    @include smaller-than($mantine-breakpoint-sm) {
+        background-color: red;
+    }
+}

@@ -11,7 +11,7 @@ const App = () => {
 
   return (
     <Provider store={store}>
-      <MantineProvider theme={theme}>
+      <MantineProvider>
         <Routes />
       </MantineProvider>
     </Provider>

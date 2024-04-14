@@ -10,7 +10,8 @@ const Routes: FC = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="/dashboard" replace />} />
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/settings" element={<div>settings</div>} />
+          <Route path="/settings" element={<div>Settings</div>} />
+          <Route path="/about" element={<div>About</div>} />
           <Route path="*" element={<h2>Ресурс не найден</h2>} />
         </Route>
       </RoutesCore>

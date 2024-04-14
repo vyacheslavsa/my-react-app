@@ -7,7 +7,6 @@ interface DashboardProps {}
 
 const Dashboard: FC<DashboardProps> = () => {
   const { data } = useGetOneCallAPIQuery(null);
-  console.log("data:", data)
 
   return (
     <div className={styles.contentDashboard}>

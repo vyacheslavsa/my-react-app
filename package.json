@@ -14,6 +14,7 @@
     "@mantine/hooks": "^7.5.3",
     "@reduxjs/toolkit": "^2.2.1",
     "clsx": "^2.1.0",
+    "dayjs": "^1.11.11",
     "dotenv": "^16.4.5",
     "i18next": "^23.10.0",
     "i18next-browser-languagedetector": "^7.2.0",

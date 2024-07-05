@@ -1,22 +1,31 @@
-import { FC } from "react";
-import { BrowserRouter, Navigate, Route, Routes as RoutesCore } from "react-router-dom";
-import Dashboard from "../pages/Dashboard";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Layout from "../components/Layout";
+import Dashboard from "../pages/Dashboard";
 
-const Routes: FC = () => {
-  return (
-    <BrowserRouter>
-      <RoutesCore>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Navigate to="/dashboard" replace />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/settings" element={<div>Settings</div>} />
-          <Route path="/about" element={<div>About</div>} />
-          <Route path="*" element={<h2>Ресурс не найден</h2>} />
-        </Route>
-      </RoutesCore>
-    </BrowserRouter>
-  );
-};
-
-export default Routes;
+export const router = createBrowserRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Navigate to="/dashboard" replace={true} />,
+      },
+      {
+        path: "*",
+        element: <Navigate to="/" replace={true} />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+      },
+      {
+        path: "/settings",
+        element: <div>Settings</div>,
+      },
+      {
+        path: "/about",
+        element: <div>About</div>,
+      },
+    ],
+  },
+]);

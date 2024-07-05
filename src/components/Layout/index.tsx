@@ -6,7 +6,7 @@ import { RxDashboard } from "react-icons/rx";
 import { IoSettingsOutline } from "react-icons/io5";
 import { TiWeatherPartlySunny } from "react-icons/ti";
 import { PiStack } from "react-icons/pi";
-import useGeolocation from "../../hooks/useGeolocation";
+import { useGeolocation } from "../../hooks/useGeolocation";
 
 const Layout = () => {
   const [opened, { toggle }] = useDisclosure();
